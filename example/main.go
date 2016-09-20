@@ -1,11 +1,12 @@
 package main
 
 import (
-	"github.com/clinta/i3gobar"
+	"github.com/travishegner/i3gobar"
 )
 
 func main() {
 	f := []func(chan<- []i3gobar.I3Block){
+		i3gobar.Uptime,
 		i3gobar.LoadAvg,
 		i3gobar.CPU,
 		i3gobar.MemFree,
