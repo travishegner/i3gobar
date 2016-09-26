@@ -75,7 +75,7 @@ func CPUGraph(uc chan<- []I3Block) {
 		}
 		uc <- b
 
-		time.Sleep(1 * time.Second)
+		time.Sleep(250 * time.Millisecond)
 	}
 }
 
