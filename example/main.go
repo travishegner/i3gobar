@@ -9,6 +9,7 @@ func main() {
 		i3gobar.Uptime,
 		i3gobar.LoadAvg,
 		i3gobar.CPUGraph,
+		i3gobar.CPUTemp,
 		i3gobar.MemFree,
 		i3gobar.SwapUsed,
 	}
