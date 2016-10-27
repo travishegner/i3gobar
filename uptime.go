@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/dustin/go-humanize"
 	"github.com/shirou/gopsutil/host"
 )
 
@@ -15,7 +16,8 @@ func Uptime(uc chan<- []I3Block) {
 			b[0].FullText = err.Error()
 		}
 		d := time.Duration(int64(ut)) * time.Second
-		b[0].FullText = fmt.Sprintf("Uptime: %v", d.String())
+		bt := time.Now().Add(-1 * d)
+		b[0].FullText = fmt.Sprintf("Booted: %v", humanize.Time(bt))
 		time.Sleep(time.Second)
 		uc <- b
 	}
