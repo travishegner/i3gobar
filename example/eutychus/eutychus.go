@@ -15,6 +15,7 @@ func main() {
 		i3gobar.Date,
 		i3gobar.TimeUTC,
 		i3gobar.TimeLocal,
+		i3gobar.Batt,
 	}
 
 	i3gobar.Run(f, false, 25)
