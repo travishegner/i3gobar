@@ -24,6 +24,6 @@ func CurrentTrack(uc chan<- []I3Block) {
 		}
 
 		uc <- b
-		time.Sleep(500 * time.Millisecond)
+		time.Sleep(2 * time.Second)
 	}
 }
